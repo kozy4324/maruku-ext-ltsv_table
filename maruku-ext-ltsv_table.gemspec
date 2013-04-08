@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["kozy4324@gmail.com"]
   gem.description   = %q{Maruku extension for table written by ltsv format.}
   gem.summary       = %q{Maruku extension for table written by ltsv format.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/kozy4324/maruku-ext-ltsv_table"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
