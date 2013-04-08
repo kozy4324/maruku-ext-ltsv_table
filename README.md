@@ -1,6 +1,6 @@
 # Maruku::Ext::LtsvTable
 
-TODO: Write a gem description
+Maruku extension for table written by ltsv format.
 
 ## Installation
 
