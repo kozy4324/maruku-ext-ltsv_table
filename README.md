@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just load.
+
+    require 'maruku'
+    require 'maruku/ext/ltsv_table'
+    
+    html = Maruku.new("
+      1:a\t2:b
+      1:c\t2:d
+    ").to_html
+
+When using maruku command, pass by `--ext` option.
+
+    $ maruku --ext ltsv_table a.md
 
 ## Contributing
 
