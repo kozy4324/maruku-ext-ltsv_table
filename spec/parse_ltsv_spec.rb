@@ -1,7 +1,6 @@
 # encode: utf-8
 
-require 'maruku'
-require 'maruku-ext-ltsv_table'
+require 'maruku/ext/ltsv_table'
 
 describe "parse_ltsv" do
 
