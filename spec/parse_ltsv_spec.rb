@@ -23,4 +23,16 @@ describe "parse_ltsv" do
     expect( doc.children[0].children[3].children[0] ).to eq "td_2"
   end
 
+  it "should parse a text which has continuous tab" do
+    doc1 = Maruku.new("
+      1:th_1\t\t2:th_2
+      1:td_1\t\t2:td_2
+    ")
+    doc2 = Maruku.new("
+      1:th_1\t\t2:th_2
+      1:td_1\t\t2:td_2
+    ")
+    expect( doc1 ).to eq doc2
+  end
+
 end

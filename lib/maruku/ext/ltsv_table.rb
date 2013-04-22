@@ -11,7 +11,7 @@ module MaRuKu
         labels = []
         while src.cur_line =~ Regexp
           lines.push(line = src.shift_line)
-          line.split("\t").map {|lv| lv.split(":")}.each {|l, v|
+          line.gsub(/\t+/, "\t").split("\t").map {|lv| lv.split(":")}.each {|l, v|
             labels.push(l) unless labels.include?(l)
           }
         end
@@ -20,7 +20,7 @@ module MaRuKu
           lines.map {|line|
             hash = {}
             labels.each {|l| hash[l] = doc.md_el(el_sym, doc.parse_span_better('')) }
-            line.split("\t").map {|lv| lv.split(":")}.each {|l, v|
+            line.gsub(/\t+/, "\t").split("\t").map {|lv| lv.split(":")}.each {|l, v|
               hash[l] = doc.md_el(el_sym, doc.parse_span_better(v))
             }
             labels.map {|l| hash[l]}
